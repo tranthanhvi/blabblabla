@@ -1,0 +1,156 @@
+/*Main Menu*/
+.main{
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    float:right;
+    margin:50px;
+}
+
+.nav-container {
+    list-style-type: none;
+    margin: 50px;
+    padding: 0 50px;
+    overflow: hidden;
+    display: inline-block;
+    float: right;
+
+}
+
+.nav-item {
+
+    text-decoration: none;
+    color: black;
+    padding: 20px 20px;
+    display: inline-block;
+}
+
+.link-nav {
+    text-decoration: none;
+    color: black;
+    padding: 20px 20px;
+}
+
+.nav-button{
+    width: 28px;
+    height: 28px;
+    display:none;
+}
+
+.title-shepar{
+    font-family: lucida handwriting;
+    padding: 40px 50px;
+    display:inline-block;
+}
+/*Project section*/
+.flex-container{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.flex-item{
+    
+    padding: 20px 20px;
+    margin: 0;
+}
+.link-flex{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+a:hover{
+    color:lightgrey;
+}
+
+
+.bottom-title-test{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+/*Footer*/ 
+
+.footer{
+    text-align: center;
+}
+/*Common features between pages*/
+a:hover{
+    color:lightgrey;
+}
+.home-button{
+    text-align: center;
+}
+.home-button>a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    padding:20px 20px;   
+}
+.home-button>a:hover{
+    color:lightgrey;
+}
+
+
+/*About page*/
+
+.about-content{
+    font-family: sans-serif;
+    color: black;
+}
+.about-flex-container{
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex: 60% 40%;
+}
+.about-flex-container-item{
+    margin:0;
+    padding: 50px 100px;
+    background-color: grey;
+    font-size: 26px;
+    
+}
+.shepaar-portrait{
+    background-color: darkgrey;
+}
+
+
+/*Tablet (Ipad)*/
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    body
+    {
+    background-color: red;
+    }
+    .nav-button{
+        display:block;
+    }
+    .nav-pc{
+        display: none;
+    }
+    
+    }
+
+
+}
+/*Mobile - (IphoneX)*/
+@media only screen and (min-width : 320px) and (max-width:767px) {
+    .flex-container, .about-flex-container{
+        flex-direction: column;
+    }
+    .nav-button{
+        display:block;
+    }
+    .nav-pc{
+        display: none;
+    }
+    }
+    
