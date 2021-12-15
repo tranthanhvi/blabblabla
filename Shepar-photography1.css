@@ -1,94 +1,4 @@
 
-/*Main Menu*/
-.main{
-    max-width: 100%;
-    padding:20px 120px;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    height: 48px;
-    float:right;
-    margin:50px;
-}
-
-.nav-container {
-    list-style-type: none;
-    margin: 50px;
-    padding: 0 50px;
-    overflow: hidden;
-    display: inline-block;
-    float: right;
-
-}
-
-.nav-item {
-
-    text-decoration: none;
-    color: black;
-    padding: 20px 20px;
-    display: inline-block;
-  
-}
-
-.link-nav {
-    text-decoration: none;
-    color: black;
-    padding: 20px 20px;
-    font-family: sans-serif;
-    font-size: 25px;
-}
-
-.nav-button{
-    width: 28px;
-    height: 28px;
-    display:block;
-}
-
-.mutual-title{
-    font-family: lucida handwriting;
-    padding: 40px 50px;
-    display:inline-block;
-}
-
-/*Project section*/
-.flex-container{
-    display:flex;
-    justify-content: center;
-    flex-direction: row;
-    max-width: 100%;
-    margin: 0;
-}
-.flex-item{
-    
-    padding: 20px 40px;
-    margin: 0;
-}
-.link-flex{
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    font-family: sans-serif;
-}
-a:hover{
-    color:lightgrey;
-}
-
-
-.bottom-title-test{
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
-
-/*Footer*/ 
-
-.footer{
-    text-align: center;
-}
-
-
 /*COMMON FEATURES BETWEEN PAGES*/
 a:hover{
     color:lightgrey;
@@ -129,7 +39,6 @@ a:hover{
     text-align: center;
     margin: 40px 30px;
     padding: 30px;
-    background-color: ;
 }
 .nav-projectbt-container{
     display: flex;
@@ -158,7 +67,73 @@ color:lightgrey;
     text-align: right;
     padding:45px 90px 45px 500px;
 }
+.main{
+    padding:20px 120px;
+}
+/*Navigation section*/
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    float:right;
+    margin:50px;
+}
 
+.nav-container {
+    list-style-type: none;
+    margin: 50px;
+    padding: 0 50px;
+    overflow: hidden;
+    display: inline-block;
+
+}
+
+.nav-item {
+
+    text-decoration: none;
+    color: black;
+    padding: 20px 20px;
+    display: inline-block;
+  
+}
+
+.link-nav {
+    text-decoration: none;
+    color: black;
+    padding: 20px 20px;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+/*Navigation for small screen*/
+.nav-mobile{
+position:fixed;
+top:0;
+right:0;
+bottom: 85%;
+width: 320px;
+max-width: 100%;
+background-color: #fff;
+transform: translateX(200%);
+opacity: 0;
+transition: transform linear 0.6s, opacity linear 0.6s;}
+
+.nav-mobile-container{
+margin-top: 24px;
+list-style-type: none;
+}
+
+.nav-mobile-link{
+display: block;
+text-decoration: none;
+font-size: 35px;
+padding: 16px 0;
+color: black;
+}
+.nav-button{
+    width: 28px;
+    height: 28px;
+    display:none;
+}
 .nav-overlay {
     position: fixed;
     top: 0;
@@ -169,31 +144,6 @@ color:lightgrey;
     display: none;
     animation: fadeIn linear 0.5s;
 }
-.nav-mobile{
-position:fixed;
-top:0;
-right:0;
-bottom: 0;
-width: 320px;
-max-width: 100%;
-background-color: #fff;
-transform: translateX(200%);
-transition: transform linear 0.2s;
-}
-
-.nav-mobile-container{
-margin-top: 24px;
-list-style-type: none;
-}
-
-.nav-mobile-link{
-display: block;
-text-decoration: none;
-font-size: 25px;
-padding: 8px 0;
-color: black;
-}
-
 .nav-mobile-close{
     width: 20px;
     height: 20px;
@@ -211,6 +161,29 @@ color: black;
 }
 .nav-input:checked ~ .nav-mobile{
   transform: translateX(0%);
+  opacity: 1;
+
+}
+
+/*Footer*/ 
+.contact-symbol {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    padding-bottom: 40px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.validator-icon{
+    border-width: 1px;
+    border-style: solid none none none;
+    padding: 15px 0;
+    text-align: center;
 }
 
 /*About page*/
@@ -236,37 +209,102 @@ color: black;
 .shepaar-portrait{
     background-color: darkgrey;
 }
+.mutual-title{
+    font-family: lucida handwriting;
+    padding: 40px 50px;
+    display:inline-block;
+}
+
+/*Grid layout for About.html*/
+        .portrait{ grid-area: pic; }
+        .title-name { grid-area: title; }
+        .background-info { grid-area: content; }
+        .contact-info { grid-area: contact; }
+
+    
+        
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+              'pic pic pic title title title'
+              'pic pic pic content content content'
+              'pic pic pic content content content'
+              'contact contact contact contact contact contact';
+            grid-gap: 0;
+            padding: 40px 40px;
+          }
+              /*Draft css from w3s*/
+              .grid-container > div {
+                text-align: center;
+                padding: 30px 50px;
+                font-size: 30px;
+              }
+        /*Css for content-pic section*/
+            .portrait{
+                padding: 30px 50px;
+            }
+            .title-name{
+            }
+            .background-info{
+                padding: 30px 50px;
+            }
+            .contact-info{
+                
+            }
+/*Project section*/
+.flex-container{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 0;
+}
+.flex-item{
+    
+    padding: 20px 40px;
+    margin: 0;
+}
+.link-flex{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+a:hover{
+    color:lightgrey;
+}
 
 
-/*Tablet (Ipad)*/
-@media screen and (min-width:768px) and (max-width: 1024px) {
-    body
-    {
-    background-color: red;
-    }
+.bottom-title-test{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/*Ipad Pro*/
+@media (min-width:800px) and (max-width: 1365px) {
     .nav-button{
-        display:block;
+        display: block;
+        
     }
     .nav-pc{
         display: none;
     }
-    
     }
-
-
-}
-/*Mobile - (IphoneX)*/
-@media only screen and (min-width : 320px) and (max-width:767px) {
+/*Small tablet-mobile phone*/
+@media (min-width: 320px) and (max-width: 799px){
+    .nav-button{
+        display: block;
+    }
+    .nav-pc{
+        display: none;
+    }
     .flex-container, .about-flex-container, .project-flex-container{
         flex-direction: column;
     }
-    .nav-button{
-        display:block;
-    }
-    .nav-pc{
-        display: none;
-    }
-    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
