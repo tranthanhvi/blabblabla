@@ -1,5 +1,11 @@
 
 /*COMMON FEATURES BETWEEN PAGES*/
+.main{
+
+    display: flex;
+    align-content: stretch;
+    max-width: 100%;
+}
 .mutual-title{
     font-family: lucida handwriting;
     padding: 40px 50px;
@@ -55,13 +61,8 @@ a:hover{
 .project-picture-single>img{
     width: 750px;
 }   /*Project-page-nav*/
-.nav-projectbt-container{
-    display: flex;
-    margin:0;
-    justify-content: center;
-    padding: 0 30px;
-    max-width: 100%;
-    flex-direction: row;
+table{
+    width: 100%;
 }
 .nav-projectbt-item{
     font-size: 35px;
@@ -76,18 +77,10 @@ color:lightgrey;
 
 }
 .left{
-    position: relative;
-    width: 200px;
-    padding:30px 400px 30px 80px;
+   text-align: left;
 }
 .right{
-    position: relative;
-    width: 200px;
-    padding:30px 80px 30px 400px;
-}
-.main{
-    padding:20px 120px;
-}
+ text-align: right;}
 
 .nav-projectbt-item>a:hover{
 color:lightgrey;
@@ -133,8 +126,8 @@ color:lightgrey;
 position:fixed;
 top:0;
 right:0;
-bottom: 85%;
-width: 320px;
+bottom: 75%;
+width: 280px;
 max-width: 100%;
 background-color: #fff;
 transform: translateX(200%);
@@ -145,11 +138,11 @@ transition: transform linear 0.6s, opacity linear 0.6s;}
 margin-top: 24px;
 list-style-type: none;
 }
-
 .nav-mobile-link{
 display: block;
 text-decoration: none;
-font-size: 35px;
+font-size: 30px;
+font-family: 'Lucida Sans';
 padding: 16px 0;
 color: black;
 }
@@ -235,6 +228,7 @@ a:hover{
     text-align: center;
 }
 .contact-table{
+    font-family: sans-serif;
     margin:auto;
     width: 20%;
     padding: 15px 0;
@@ -295,7 +289,7 @@ a:hover{
         flex-direction: column;
     }
 }
-    }
+
 /*Small tablet-mobile phone*/
 @media (min-width: 320px) and (max-width: 799px){
     .nav-button{
